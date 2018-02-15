@@ -1,41 +1,45 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
-    <AssemblyName>AutoMapper.Attributes</AssemblyName>
-    <RootNamespace>AutoMapper.Attributes</RootNamespace>
-	<PackageId>AutoMapper.Attributes</PackageId>
-	<DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
-	<SignAssembly>false</SignAssembly>
-	<AssemblyOriginatorKeyFile>AutoMapper.Attributes.snk</AssemblyOriginatorKeyFile>
-	<Authors>Spencer Schneidenbach</Authors>
-	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<Description>A convenient way to create AutoMapper type mappings using attributes.</Description>
-	<Company />
-	<PackageProjectUrl>https://github.com/schneidenbach/AutoMapper.Attributes</PackageProjectUrl>
-	<PackageLicenseUrl>https://github.com/schneidenbach/AutoMapper.Attributes/blob/master/LICENSE</PackageLicenseUrl>
-	<RepositoryUrl>https://github.com/schneidenbach/AutoMapper.Attributes</RepositoryUrl>
-	<PackageTags>AutoMapper, AutoMapper.Attributes</PackageTags>
-	<AssemblyVersion>6.0.1.0</AssemblyVersion>
-	<FileVersion>6.0.1.0</FileVersion>
-	<Version>6.0.1</Version>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;netstandard1.3;net45</TargetFrameworks>
+        <AssemblyName>AutoMapper.Attributes</AssemblyName>
+        <RootNamespace>AutoMapper.Attributes</RootNamespace>
+        <PackageId>AutoMapper.Attributes</PackageId>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard1.3\AutoMapper.Attributes.xml</DocumentationFile>
-  </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="5.0.2" />
-  </ItemGroup>
+        <SignAssembly>false</SignAssembly>
+        <AssemblyOriginatorKeyFile>AutoMapper.Attributes.snk</AssemblyOriginatorKeyFile>
+        <Authors>Spencer Schneidenbach</Authors>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Description>A convenient way to create AutoMapper type mappings using attributes.</Description>
+        <Company />
+        <PackageProjectUrl>https://github.com/schneidenbach/AutoMapper.Attributes</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/schneidenbach/AutoMapper.Attributes/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/schneidenbach/AutoMapper.Attributes</RepositoryUrl>
+        <PackageTags>AutoMapper, AutoMapper.Attributes</PackageTags>
+        <AssemblyVersion>6.0.1.0</AssemblyVersion>
+        <FileVersion>6.0.1.0</FileVersion>
+        <Version>6.0.1</Version>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
-  </ItemGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|AnyCPU'">
+        <DocumentationFile>bin\Debug\netstandard1.3\AutoMapper.Attributes.xml</DocumentationFile>
+    </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="5.0.2" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+        <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+        <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+        <Reference Include="System" />
+        <Reference Include="Microsoft.CSharp" />
+    </ItemGroup>
 
 </Project>
